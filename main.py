@@ -1,5 +1,7 @@
 # 프롬프트 관리 프로그램
 
+# 프롬프트 관리 프로그램
+
 prompts = []
 
 while True:
@@ -12,8 +14,11 @@ while True:
 
     if choice == "1":
         prompt = input("저장할 프롬프트를 입력하세요: ")
-        prompts.append(prompt)
-        print("프롬프트가 저장되었습니다.")
+        if prompt.strip() == "":
+            print("빈 프롬프트는 저장할 수 없습니다.")
+        else:
+            prompts.append(prompt)
+            print("프롬프트가 저장되었습니다.")
 
     elif choice == "2":
         print("\n저장된 프롬프트 목록")
@@ -29,10 +34,3 @@ while True:
 
     else:
         print("잘못된 선택입니다. 다시 입력하세요.")
-        if choice == "1":
-    prompt = input("저장할 프롬프트를 입력하세요: ")
-    if prompt.strip() == "":
-        print("빈 프롬프트는 저장할 수 없습니다.")
-    else:
-        prompts.append(prompt)
-        print("프롬프트가 저장되었습니다.")
