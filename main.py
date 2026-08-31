@@ -115,7 +115,7 @@ while True:
     if choice == "1":
         add_prompt()
     elif choice == "2":
-        show_prompts()
+        show_prompt_list()
     elif choice == "3":
         delete_prompt()
     elif choice == "4":
