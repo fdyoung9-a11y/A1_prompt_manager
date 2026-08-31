@@ -15,5 +15,23 @@ python main.py
 - 프롬프트 삭제
 - 즐겨찾기 추가/해제
 - 즐겨찾기 프롬프트 목록 조회
+- JSON 파일 저장 및 불러오기
+- 카테고리별 Markdown 파일 내보내기
 - 잘못된 입력 처리
 - 종료 기능
+
+## 사용 기술
+- Python 3
+- Git
+- GitHub
+
+## 프로젝트 구조
+A1_prompt_manager/
+├─ main.py
+├─ README.md
+├─ .gitignore
+├─ prompts.json
+└─ exports/
+   ├─ 공부.md
+   ├─ 면접.md
+   └─ 글쓰기.md
