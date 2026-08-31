@@ -1,0 +1,20 @@
+[
+    {
+        "title": "영어 문장 교정",
+        "content": "이 문장을 자연스럽고 정확한 영어로 고쳐줘.",
+        "category": "공부",
+        "favorite": false
+    },
+    {
+        "title": "자기소개 작성",
+        "content": "면접용 1분 자기소개를 작성해줘.",
+        "category": "면접",
+        "favorite": false
+    },
+    {
+        "title": "블로그 글 아이디어",
+        "content": "AI와 생산성을 주제로 블로그 글 아이디어 5개를 제안해줘.",
+        "category": "글쓰기",
+        "favorite": false
+    }
+]
