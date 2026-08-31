@@ -24,7 +24,8 @@ def show_menu():
     print("1. 프롬프트 추가")
     print("2. 프롬프트 목록 보기")
     print("3. 프롬프트 삭제")
-    print("4. 종료")
+    print("4. 카테고리별 조회")
+    print("5. 종료")
 
 def add_prompt():
     print("\n[프롬프트 추가]")
@@ -87,6 +88,26 @@ def delete_prompt():
     deleted = prompts.pop(index)
     print(f"'{deleted['title']}' 프롬프트가 삭제되었습니다.")
 
+def show_prompts_by_category():
+    print("\n[카테고리별 조회]")
+    category = input("조회할 카테고리를 입력하세요: ").strip()
+
+    if category == "":
+        print("카테고리는 비워둘 수 없습니다.")
+        return
+
+    found = False
+
+    for prompt in prompts:
+        if prompt["category"] == category:
+            print(f"\n제목: {prompt['title']}")
+            print(f"내용: {prompt['content']}")
+            print(f"카테고리: {prompt['category']}")
+            found = True
+
+    if not found:
+        print("해당 카테고리의 프롬프트가 없습니다.")
+
 while True:
     show_menu()
     choice = input("메뉴를 선택하세요: ").strip()
@@ -98,7 +119,9 @@ while True:
     elif choice == "3":
         delete_prompt()
     elif choice == "4":
+        show_prompts_by_category()
+    elif choice == "5":
         print("프로그램을 종료합니다.")
         break
     else:
-        print("잘못된 선택입니다. 다시 입력하세요.")
+        print("잘못된 입력입니다. 다시 선택하세요.")
